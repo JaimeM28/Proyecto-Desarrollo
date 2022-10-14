@@ -10,7 +10,7 @@ defineProps({
 <template>
     <div class="w-full h-64 grid justify-items-center pt-12" >
         <img class="w-1/2 mt-10" src="../../assets/images/logo.png" alt="imagen"> 
-        <p class="text-base font-semibold">{{text}}</p>
+        <p class="text-base font-bold">{{text}}</p>
     </div>
 </template>
 
