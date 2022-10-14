@@ -37,34 +37,7 @@ export default {
     </div>
 </template>
 
-<style>
 
-
-
-@media screen and (max-width: 900px) {
- 
-
-  
-a{
-  width: 100%;  
-  display: flex;
-  justify-content: center;
-}
-    #menu:hover{
-        background-color:rgb(254 240 138);
-    }
-
-  
-
-    
-
-    .navbar__btn{
-        flex-direction: column;
-    }
-   
-}
-
-</style>
 
 
 

@@ -3,7 +3,6 @@ const plugin = require('tailwindcss/plugin')
 module.exports = plugin(function({addComponents, theme}){
     addComponents({
         'navbar':{
-            display: 'block',
             height: '50px'
         },
         '#menu':{
@@ -52,29 +51,37 @@ module.exports = plugin(function({addComponents, theme}){
         },
 
         '@media screen and (max-width:900px)':{
+            '.navbar':{
+                height: '50px'
+            },
+
             '#menu':{
                 display: 'block',
                 position: 'relative',
                 top: '7px',
                 left: '10px',
-                'hover':{
-                    backgroundColor:'rgb(254 240 138)',
-                }
             },
 
-            '.navbar':{
-                height: '50px'
+            '#menu:hover':{
+                backgroundColor:'rgb(254 240 138)',
             },
+
 
             '.open-menu' :{
                 opacity: '1',
-                height: '230px'
+                height: '230px',
+                transition: 'all 0.3s ease-out'
                 },
 
             '.closed-menu': {
-                opacity: '0',
+                display: 'none',
                 height: '0',
+                '.navbar__href , .navbar__img, .navbar__btn':{
+                    display: 'none'
+                },
+                opacity: '0',
                 padding: '0',
+                transition: 'all 0.3s ease-out',
                 },
 
             '.navbar__content':{
@@ -84,7 +91,7 @@ module.exports = plugin(function({addComponents, theme}){
                 flexDirection: 'column',
                 zIndex: '100',
                 position: 'relative',
-                transition: 'all 0.2s ease-out',
+                
 
                 '.navbar__href' :{
                     flexDirection: 'column',
@@ -93,10 +100,10 @@ module.exports = plugin(function({addComponents, theme}){
                         width: '100%', 
                         display: 'flex',
                         justifyContent: 'center'
-                      }
-                  },
+                    }
+                },
 
-                  '.navbar__btn':{
+                '.navbar__btn':{
                     flexDirection: 'column'
                 }
 
