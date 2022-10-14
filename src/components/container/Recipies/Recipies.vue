@@ -21,7 +21,7 @@ import Card from '../Card.vue';
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
 }
 
 
