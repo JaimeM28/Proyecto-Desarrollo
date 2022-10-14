@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-      <div class="card border-zinc-800 pt-50 rounded-lg border-2 ">
+    <div class="card border-zinc-800  rounded-lg border">
         <img class="card__img" :src="url" alt="comida">
         <p class="card__title">{{title}}</p>
         <Secondary class="card__secondary" :text="'Ver receta'"/>
@@ -26,10 +26,14 @@ defineProps({
 <style>
 
 .card{
-    width: 220px;
+    width: 95%;
     height: 320px;
     padding: 15px;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .card:hover{
@@ -49,7 +53,10 @@ defineProps({
     height: 200px;
 }
 
-.card .card__secondary{
+.card__secondary{
+    position: relative;
+    top: 10px;
+    width: 50%;
     height: 30px;
 }
 </style>

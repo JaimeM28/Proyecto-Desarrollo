@@ -17,9 +17,9 @@ export default {
 </script>
 
 <template>
-    <div class="navbar fixed top-0 bg-yellow-300 w-full">
+    <div class="navbar fixed top-0 bg-yellow-300 w-full z-10">
     <img src="../../assets/images/Hamburger.png" alt="menu" id="menu" @click="showMenu()">
-    <div class="navbar__content bg-yellow-300" :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'">
+    <div class="navbar__content bg-yellow-300 fixed" :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'">
     <div class="navbar__img">
         <img src="../../assets/images/logo.png" alt="logo olla creativa">
         

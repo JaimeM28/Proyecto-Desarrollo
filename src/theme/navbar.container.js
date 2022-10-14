@@ -10,6 +10,7 @@ module.exports = plugin(function({addComponents, theme}){
             display: 'none'
         },
         '.navbar__content':{
+            float: 'inline',
             width: '100%',
             height: '50px',
             display:'grid',
