@@ -27,7 +27,7 @@ defineProps({
 
 .card{
     width: 95%;
-    height: 320px;
+    height: 340px;
     padding: 15px;
     margin: 10px;
     display: flex;
