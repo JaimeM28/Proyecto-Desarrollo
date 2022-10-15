@@ -41,4 +41,33 @@ const router = createRouter({
     ]
 })
 
+const userState = () => {
+    const userInfo = JSON.parse(localStorage.getItem('user-info'))
+    try {
+        if(userInfo.name && userInfo.email){
+            return true
+        }
+    } catch  {
+        return false
+    }
+}
+
+router.beforeEach((to,from, next) =>{
+    const userInfo = userState()
+    if(to.path === '/' && !userInfo || to.path === '/blog-page' && !userInfo){
+        next('login')
+    }
+    else 
+    if(to.path === '/login' && userInfo ){
+        next('/')
+    }else if(to.path === '/register' && userInfo ){
+        next('/')
+    }
+    else{
+        next()
+    }
+    
+}) 
+
+
 export default router

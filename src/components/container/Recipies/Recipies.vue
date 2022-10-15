@@ -2,6 +2,16 @@
 import Recipies from './data.js'
 import Card from '../Card.vue';
 
+let userState = false
+const userInfo = JSON.parse(localStorage.getItem('user-info'))
+try {
+  if(userInfo.name && userInfo.email){
+    userState = true
+  }
+} catch{
+  console.log("Usuario no encontrado")
+  
+}
 </script>
 
 <template>
@@ -10,7 +20,8 @@ import Card from '../Card.vue';
             <Card 
             :title="item.title" 
             :url="item.url"
-              :item="item"/>
+              :item="item"
+              :disabled="!userState"/>
         </div>
     </div>
 </template>

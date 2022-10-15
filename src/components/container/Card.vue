@@ -15,7 +15,11 @@ defineProps({
 
     item: {
         type: Object,
-    }
+    },
+
+    disabled:{
+        type: Boolean,
+    } 
     
 
 })
@@ -32,7 +36,7 @@ function blog(item) {
     <div class="card border-zinc-800  rounded-lg border">
         <img class="card__img" :src="url" alt="comida">
         <p class="card__title">{{title}}</p>
-        <Secondary class="card__secondary" :text="'Ver receta'" v-on:change="blog(item)"/>
+        <Secondary :disabled="disabled" class="card__secondary" :text="'Ver receta'" v-on:change="blog(item)"/>
     </div>
 </template>
 
