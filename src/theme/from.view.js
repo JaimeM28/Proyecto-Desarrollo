@@ -11,7 +11,8 @@ module.exports = plugin(function ({ addComponents, theme}){
             alignItems: 'center',
 
             '.form__content':{
-                width: '400px',
+                minWidth: '300px',
+                width: '35%',
                 backgroundColor:'rgb(64 64 64);',
                 borderRadius: '1rem',
                 padding: '40px 30px 0px 30px',

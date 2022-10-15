@@ -26,6 +26,10 @@ import router from '../../router/index.router';
 const loginRouter= () => {
     router.push('/login')
 }
+
+const registerRouter = () => {
+    router.push("/register")
+}
 </script>
 
 <template>
@@ -42,7 +46,7 @@ const loginRouter= () => {
         <a href="/contact">Contactanos</a>
     </div>
     <div class="navbar__btn">
-        <Secondary :text="'Registro'"/>
+        <Secondary :text="'Registro'" v-on:change="registerRouter"/>
         <Button :text="'Iniciar Sesion'" v-on:change="loginRouter"/>
     </div>
     </div>

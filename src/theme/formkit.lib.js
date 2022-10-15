@@ -12,6 +12,7 @@ export default {
     },
     email: { input: input },
     password: { input: input },
+    text: {input: input},
     submit: {
         wrapper: 'grid justify-items-center',
         input: 'w-60 bg-yellow-600 hover:bg-yellow-500 text-white'
