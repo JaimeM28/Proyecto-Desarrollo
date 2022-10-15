@@ -1,6 +1,22 @@
 <script setup>
 import Navbar from '../components/container/Navbar.vue';
+import axios from 'axios'
+import router from '../router/index.router';
 
+   
+async function registerHandler(credentials){
+    try{
+        let result = await axios.post('http://localhost:3000/users?', credentials)
+        if(result.status == 201){
+            localStorage.setItem('user-info',JSON.stringify(result.data))
+            return router.push("/")
+        }
+    }
+    
+    catch{
+        console.log('error')
+    }
+}
 </script>
 
 <template>
@@ -10,7 +26,7 @@ import Navbar from '../components/container/Navbar.vue';
             <FormKit
             type="form"
             submit-label="Registrar"
-            @submit=""
+            @submit="registerHandler"
             :incomplete-message="false"
             >
 
