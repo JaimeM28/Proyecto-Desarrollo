@@ -26,8 +26,8 @@ export default {
     </div>
     <div class="navbar__href">
         <a href="/">Inicio</a>
-        <a href="/About">Sobre nosotros</a>
-        <a href="/Contact">Contactanos</a>
+        <a href="/about">Sobre nosotros</a>
+        <a href="/contact">Contactanos</a>
     </div>
     <div class="navbar__btn">
         <Secondary :text="'Registro'"/>

@@ -3,7 +3,9 @@ defineProps({
     text: {
         type: String,
         default: 'Button'
-    }
+    },
+
+    
 })
 
 
@@ -14,5 +16,6 @@ const button=`w-full h-full border-2 border-[transparent]
 </script>
 
 <template>
-    <button :class="button"> {{ text }}</button>
+    <button @click="$emit('change')" 
+    :class="button"> {{ text }}</button>
 </template>

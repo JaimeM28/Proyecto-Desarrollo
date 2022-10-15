@@ -9,7 +9,8 @@ import Card from '../Card.vue';
         <div class="recipies__card" v-for="(item) in Recipies"> 
             <Card 
             :title="item.title" 
-            :url="item.url"/>
+            :url="item.url"
+              :item="item"/>
         </div>
     </div>
 </template>

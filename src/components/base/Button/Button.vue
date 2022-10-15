@@ -12,7 +12,8 @@ const button = `w-full h-full bg-zinc-800 hover:bg-zinc-700
 </script>
 
 <template>
-    <button :class="button"> {{ text }}</button>
+    <button v-on:click="$emit('change')"
+    :class="button"> {{ text }}</button>
 </template>
 
 

@@ -1,6 +1,7 @@
 <script setup>
 import Secondary from '../base/Button/Secondary.vue'
 
+import router from '../../router/index.router'
 defineProps({
     url:{
         type: String,
@@ -12,14 +13,26 @@ defineProps({
         default:'Receta'
     },
 
+    item: {
+        type: Object,
+    }
+    
+
 })
+
+function blog(item) {
+    localStorage.setItem("info-receta",JSON.stringify(item))
+    router.push('/blog-page')
+}
 </script>
+
+
 
 <template>
     <div class="card border-zinc-800  rounded-lg border">
         <img class="card__img" :src="url" alt="comida">
         <p class="card__title">{{title}}</p>
-        <Secondary class="card__secondary" :text="'Ver receta'"/>
+        <Secondary class="card__secondary" :text="'Ver receta'" v-on:change="blog(item)"/>
     </div>
 </template>
 
