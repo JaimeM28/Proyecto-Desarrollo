@@ -1,6 +1,7 @@
 <script>
 import Secondary from '../base/Button/Secondary.vue';
 import Button from '../base/Button/Button.vue';
+
 export default {
     data() {
         return {
@@ -14,6 +15,17 @@ export default {
     },
     components: { Button, Secondary }
 };
+
+
+</script>
+
+
+<script setup>
+
+import router from '../../router/index.router';
+const loginRouter= () => {
+    router.push('/login')
+}
 </script>
 
 <template>
@@ -31,7 +43,7 @@ export default {
     </div>
     <div class="navbar__btn">
         <Secondary :text="'Registro'"/>
-        <Button :text="'Iniciar Sesion'"/>
+        <Button :text="'Iniciar Sesion'" v-on:change="loginRouter"/>
     </div>
     </div>
     </div>
