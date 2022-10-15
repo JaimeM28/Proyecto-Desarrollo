@@ -1,7 +1,9 @@
-# Vue 3 + Vite
+# Desarrollo web- Fronted
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Este proyecto se basa en la elaboración de un blog de comida en el que el usuario primero deberá de contar con una cuenta para ver el contenido de las recetas y poder hacer comentarios
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## Funcionamiento
+El usuario primero debe de iniciar sesión. Si no tiene una cuenta, deberá crearse una y automaticamente se iniciará sesión una vez registrado.
+
+Una vez iniciada las sesión, el usuario podrá ver las recetas pulsando el boton "ver receta", el cual lo redirigirá a la página blog-page. En dicha pagina podrá hacer comentarios.

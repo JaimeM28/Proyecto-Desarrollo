@@ -21,6 +21,8 @@ async function registerComents(credentials){
     }
 }
 
+
+
 </script>
 
 <template>
